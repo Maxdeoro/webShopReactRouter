@@ -1,8 +1,14 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <div></div>
+        <>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='about'>About</NavLink>
+            <NavLink to='categories'>Categories</NavLink>
+            <NavLink to='product'>Product details</NavLink>
+            <NavLink to='cart'>Cart</NavLink>
+        </>
     )
 };
 
