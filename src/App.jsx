@@ -8,7 +8,7 @@ import Categories from "./pages/Categories";
 import ProductDetails from "./pages/ProductDetails";
 
 const router = createBrowserRouter([{path: '/', element: <Layout />, children: [
-  {path: '', element: <Home />},
+  {index: true, element: <Home />},
   {path: 'about', element: <About />},
   {path: 'cart', element: <Cart />},
   {path: 'categories', element: <Categories />},
