@@ -4,16 +4,16 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
-import Categories from "./pages/Categories";
+import Category from "./pages/Category";
 import ProductDetails from "./pages/ProductDetails";
 
 const router = createBrowserRouter([{path: '/', element: <Layout />, children: [
   {index: true, element: <Home />},
   {path: 'about', element: <About />},
   {path: 'cart', element: <Cart />},
-  {path: 'categories', element: <Categories />},
+  {path: 'category/:categoryId', element: <Category />},
   {path: '*', element: <NotFound />},
-  {path: 'product', element: <ProductDetails />},
+  {path: 'product/:productId', element: <ProductDetails />},
 ]}]);
 
 function App() {
