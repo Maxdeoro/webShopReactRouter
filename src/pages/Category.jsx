@@ -13,17 +13,21 @@ function Category() {
 
     return (
         <div>
-            <h2>Category {categoryId}</h2>
-            <ul style={{display:"flex"}}>
-                {currentCategoryArray.map((product) => (
-                    <li key={product.id}>
-                        <Link to={`/product/${[product.id]}`}>
-                            {product.name} {product.price}$
-                        </Link>
-                        <img src={product.img} alt={product.name} style={{width:'150px'}} />
-                    </li>
-                ))}
-            </ul>
+            {currentCategoryArray.length > 0 ? (
+                <>
+                <h2>Category {categoryId}</h2>
+                <ul style={{display:"flex"}}>
+                    {currentCategoryArray.map((product) => (
+                        <li key={product.id}>
+                            <Link to={`/product/${[product.id]}`}>
+                                {product.name} {product.price}$
+                            </Link>
+                            <img src={product.img} alt={product.name} style={{width:'150px'}} />
+                        </li>
+                    ))}
+                </ul>
+                </>
+            ) : <p>Not found</p>}
         </div>
     )
 }
