@@ -1,33 +1,47 @@
 import { products } from '../data/data';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function Category() {
 
     const {categoryId} = useParams();
-    console.log(categoryId);
+    const [searchParams, setSearchParams] = useSearchParams();
 
-    const currentCategoryArray = products.filter((products) => 
-        products.categoryId === categoryId);
-    console.log(currentCategoryArray);
+    const maxPrice = searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : Infinity;
+    // console.log(maxPrice);
+
+    const currentCategoryArray = products.filter((product) => 
+        product.categoryId === categoryId && product.price <= maxPrice);
+
+    function handleChange(e) {
+        const value = e.target.value;
+        setSearchParams(value ? {maxPrice: value} : {});
+    };
 
     return (
         <div>
-            {currentCategoryArray.length > 0 ? (
-                <>
-                <h2>Category {categoryId}</h2>
-                <ul style={{display:"flex"}}>
-                    {currentCategoryArray.map((product) => (
-                        <li key={product.id}>
-                            <Link to={`/product/${[product.id]}`}>
-                                {product.name} {product.price}$
-                            </Link>
-                            <img src={product.img} alt={product.name} style={{width:'150px'}} />
-                        </li>
-                    ))}
-                </ul>
-                </>
-            ) : <p>Not found</p>}
+            <>
+            <h2>Category {categoryId}</h2>
+            <div>
+                <label htmlform="maxPrice"></label>
+                <input type='number' id='maxPrice' 
+                        placeholder='Enter max price' 
+                        onChange={handleChange}
+                        value={searchParams.get('maxPrice') || ""}
+                >
+                </input>
+            </div>
+            <ul style={{display:"flex"}}>
+                {currentCategoryArray.map((product) => (
+                    <li key={product.id}>
+                        <Link to={`/product/${[product.id]}`}>
+                            {product.name} {product.price}$
+                        </Link>
+                        <img src={product.img} alt={product.name} style={{width:'150px'}} />
+                    </li>
+                ))}
+            </ul>
+            </>
         </div>
     )
 }
