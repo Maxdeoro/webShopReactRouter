@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div>
+            <Link to='/category/Electronics' state={{from: 'Home page', maxPrice: 600}}>
+                 Electronics at low price
+            </Link>
             <h1>Categories</h1>
             <ul style={{display: 'flex'}}>
                 {categories.map(category => (

@@ -1,14 +1,16 @@
 import { products } from '../data/data';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useParams, useSearchParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function Category() {
 
     const {categoryId} = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
+    const location = useLocation();
+    console.log(location);
 
-    const maxPrice = searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : Infinity;
-    // console.log(maxPrice);
+    // const maxPrice = searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : Infinity;
+    const maxPrice = location.state.maxPrice;
 
     const currentCategoryArray = products.filter((product) => 
         product.categoryId === categoryId && product.price <= maxPrice);
@@ -23,7 +25,7 @@ function Category() {
             <>
             <h2>Category {categoryId}</h2>
             <div>
-                <label htmlform="maxPrice"></label>
+                <label form="maxPrice"></label>
                 <input type='number' id='maxPrice' 
                         placeholder='Enter max price' 
                         onChange={handleChange}
