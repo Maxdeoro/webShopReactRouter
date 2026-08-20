@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
 import Category from "./pages/Category";
 import ProductDetails from "./pages/ProductDetails";
+import Thanks from "./pages/Thanks";
 
 const router = createBrowserRouter([{path: '/', element: <Layout />, children: [
   {index: true, element: <Home />},
@@ -14,6 +15,7 @@ const router = createBrowserRouter([{path: '/', element: <Layout />, children: [
   {path: 'category/:categoryId', element: <Category />},
   {path: '*', element: <NotFound />},
   {path: 'product/:productId', element: <ProductDetails />},
+  {path:'thanks', element: <Thanks />},
 ]}]);
 
 function App() {
