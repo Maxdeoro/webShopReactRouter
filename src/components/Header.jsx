@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
+import styles from './Header.module.css';
 
 function Header() {
     return (
         <>
-            <h1>Header</h1>
+            <h1 className={styles.header}>Header</h1>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/categories'>Categories</NavLink>
