@@ -1,11 +1,34 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
-        <>
-        <hr></hr>
-        <h2>
-            FOOTER
-        </h2>
-        </>
+        <footer>
+            <div>
+                <h3
+                    >Customer <br/> Support
+                </h3>
+                <ul>
+                    <li>
+                        <Link to='#'>FAQ</Link>
+                    </li>
+                    <li>
+                        <Link to='#'>Shipping & Returning</Link>
+                    </li>
+                    <li>
+                        <Link to='#'>Order Tracking</Link>
+                    </li>
+                    <li>
+                        <Link to='#'>Contact Us</Link>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        // <>
+        // <hr></hr>
+        // <h2>
+        //     FOOTER
+        // </h2>
+        // </>
     )
 };
 
