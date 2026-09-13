@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <header className="bg-lime-200 py-8 px-5">
+        <header className="bg-lime-200 py-8 px-5 flex justify-between">
             <img className="h-6" src="/logo.svg" alt="logo" />
-            <h1 className="text-3xl text-text">Header</h1>
+            {/* <h1 className="text-3xl text-text">Header</h1> */}
             <nav>
-                <ul>
+                <ul className="flex gap-x-10">
                     <li>
                         <NavLink to='/' className='font-bold'>Home</NavLink>
                     </li>

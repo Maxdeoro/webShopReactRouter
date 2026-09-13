@@ -7,8 +7,9 @@ function Home() {
             <Link to='/category/Electronics' state={{from: 'Home page', maxPrice: 600}}>
                  Electronics at low price
             </Link>
-            <h1>Categories</h1>
-            <ul style={{display: 'flex'}}>
+            {/* <h1>Categories</h1> */}
+            <ul className='flex gap-x-5 justify-around'>
+            {/* <ul style={{display: 'flex'}} className='flex gap-x-5'> */}
                 {categories.map(category => (
                     <li key={category.id}>
                         <Link to={`/category/${category.name}`}>
