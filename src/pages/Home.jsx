@@ -12,9 +12,11 @@ function Home() {
             {/* <ul style={{display: 'flex'}} className='flex gap-x-5'> */}
                 {categories.map(category => (
                     <li key={category.id}>
-                        <Link to={`/category/${category.name}`}>
-                            {category.name}
-                            <img src={category.img} alt={category.name} />
+                        <Link to={`/category/${category.name}`} className='relative flex flex-col 
+                            items-center justify-center'>
+                            <span className='absolute z-10 font-semibold text-white text-xl'>{category.name}</span>
+                            <img src={category.img} alt={category.name} className='rounded-md'/>
+                            <div className='absolute inset-0 bg-gray-900 opacity-40 rounded-md'></div>
                         </Link>
                     </li>
                 ))}
