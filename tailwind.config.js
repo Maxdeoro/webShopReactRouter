@@ -17,6 +17,8 @@ export default {
         'silver': '#ecebff',
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
+        primary: '#3f82f6',
+        secondary: '#1e3a8a',
       },
     },
   },
