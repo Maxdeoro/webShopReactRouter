@@ -1,8 +1,9 @@
-/* .active {
-    font-weight: bold;
-    color: blue;
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .links{
+        @apply text-xl font-semibold text-blue-400 hover:text-blue-900;
+    }
+};

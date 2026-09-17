@@ -9,19 +9,20 @@ function Header() {
             <nav>
                 <ul className="flex gap-x-10">
                     <li>
-                        <NavLink to='/' className='font-bold'>Home</NavLink>
+                        <NavLink to='/' className='links'>Home</NavLink>
+                        {/* <NavLink to='/' className='font-bold'>Home</NavLink> */}
                     </li>
                     <li>
-                        <NavLink to='/about' className='font-bold'>About</NavLink>
+                        <NavLink to='/about' className='links'>About</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/cart' className='font-bold'>Cart</NavLink>
+                        <NavLink to='/cart' className='links'>Cart</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/categories' className='font-bold'>Categories</NavLink>
+                        <NavLink to='/categories' className='links'>Categories</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/product' className='font-bold'>Product details</NavLink>
+                        <NavLink to='/product' className='links'>Product details</NavLink>
                     </li>
                 </ul>    
             </nav>
