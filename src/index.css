@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+/* @layer components{
     .links{
         @apply text-xl font-semibold text-blue-400 hover:text-blue-900;
     }
-};
+}; */
