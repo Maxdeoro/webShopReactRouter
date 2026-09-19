@@ -20,6 +20,9 @@ export default {
         primary: '#3f82f6',
         secondary: '#1e3a8a',
       },
+      fontFamily: {
+        poppins: 'poppins, sans-serif',
+      },
     },
   },
   plugins: [],
