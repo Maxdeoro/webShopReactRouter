@@ -23,6 +23,19 @@ export default {
       fontFamily: {
         poppins: 'poppins, sans-serif',
       },
+      keyframes: {
+        myanimation: {
+          '0%, 100%': {
+            transform: 'rotate(-3deg)',
+          },
+          '50%': {
+            transform: 'rotate(3deg)',
+          },
+        }
+      },
+      animation: {
+        myanimation: 'myanimation 1s ease-in-out infinite'
+      },
     },
   },
   plugins: [],

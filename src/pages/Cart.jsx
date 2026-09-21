@@ -30,8 +30,10 @@ function Cart() {
 
         {/* Поле Name */}
         <div>
-          <input id="name" type="text" placeholder="Enter your full name" required />
-          <label htmlFor="name">Name</label>
+          <input id="name" type="text" placeholder="Enter your full name" required 
+            className="peer"
+          />
+          <label htmlFor="name" className="peer-hover:text-blue-600">Name</label>
         </div>
 
         {/* Поле Email */}
