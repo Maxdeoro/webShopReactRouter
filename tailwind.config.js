@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+import textShadow from 'tailwindcss-textshadow';
+
 export default {
   content: [
     "./index.html",
@@ -38,6 +41,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    typography,
+    textShadow
+  ],
 }
 

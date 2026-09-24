@@ -2,9 +2,9 @@
 
 function About() {
   return (
-    <div>
+    <div className="prose prose-gray prose-base">
       {/* Заголовки */}
-      <h1>About Our E-commerce Platform</h1>
+      <h1 className="text-shadow-2xl">About Our E-commerce Platform</h1>
       <h2>Our Vision</h2>
       <h3>How We Started</h3>
       <h4>Key Milestones</h4>
