@@ -10,18 +10,30 @@ function ProductDetails() {
     console.log(product);
 
     return (
-        <div>
+        <div className='py-10 px-6'>
             {product ? (
                 <>
-                <h2>{product.name} </h2>
-                <img src={product.img} alt={product.name} style={{width: '180px'}} />
-                <h3>{product.price}$</h3>
-                <div>
-                    <h3>Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2 className='text-2xl font-semibold text-center mb-6'>
+                    {product.name} 
+                </h2>
+                <div className="flex flex-col p-6 items-center bg-white rounded-md">
+                    <img src={product.img} alt={product.name} className="w-60 h-60 mb-4 rounded-mb" />
+                    <h3 className='text-xl font-semibold text-center mb-6'>
+                        {product.price}$
+                    </h3>
+                    <div>
+                        <h3 className='text-xl font-semibold text-center mb-4'>
+                            Description
+                        </h3>
+                        <p className="text-lg text-gray-700">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
                 </div>
                 </>
-            ) : <p>Not found</p>} 
+            ) : <p className="text-center text-xl text-red-700 font-bold">
+                    Not found
+                </p>} 
         </div>
     )
 }

@@ -20,7 +20,7 @@ function Home() {
                         <Link to={`/category/${category.name}`} className='relative flex flex-col 
                             items-center justify-center group'>
                             <span className='absolute z-10 font-semibold text-white text-xl 
-                                transition duration-1000 group-hover:text-red-500 group-hover:text-2xl
+                                transition group-hover:text-3xl
                                 animate-pulse'>
                                 {category.name}
                             </span>
